@@ -1,0 +1,97 @@
+# block for unix based make
+PROJECT = casino
+CC = g++
+LINK = g++
+LIBPATH =
+CFLAGS = -g -ggdb
+LFLAGS =
+O = o
+INCPATH = -I.
+RMCMD = rm
+DEFS = -Dunix
+
+
+# block for borland c++ make
+#PROJECT = casino.exe
+#CC = bcc
+#LINK = tlink
+#LLINE=@linkcmds
+#LIBPATH = -L\usr\lib
+#CFLAGS = -k -mh
+#LFLAGS = -lx
+#O = obj
+#INCPATH = -I\usr\include
+#RMCMD = command /c erase
+#DEFS = -Dmsdos
+
+OBJS = \
+	bacc.$(O) \
+	bj.$(O) \
+	card.$(O) \
+	cardgame.$(O) \
+	carib.$(O) \
+	chuck.$(O) \
+	craps.$(O) \
+	deck.$(O) \
+	dstud.$(O) \
+	faceup.$(O) \
+	hand.$(O) \
+	keno.$(O) \
+	lir.$(O) \
+	mterm.$(O) \
+	paigow.$(O) \
+	player.$(O) \
+	poker.$(O) \
+	reddog.$(O) \
+	roul.$(O) \
+	slotmach.$(O) \
+	support.$(O) \
+	texas.$(O) \
+	three.$(O) \
+	wheel.$(O) \
+	pkrmach.$(O) \
+	main.$(O)
+
+# on unix system, next line needed
+LLINE=$(OBJS) -o casino
+
+$(PROJECT): $(OBJS)
+	$(LINK) $(LIBPATH) $(LFLAGS) $(LLINE)
+
+.cpp.$(O):
+	$(CC) $(LIBPATH) $(INCPATH) $(CFLAGS) $(DEFS) -c $<
+
+clean:
+	$(RMCMD) *.$(O)
+	$(RMCMD) $(PROJECT)
+
+bacc.$(O): bacc.cpp header.h bacc.h cardgame.h card.h hand.h player.h deck.h
+bj.$(O): bj.cpp header.h bj.h cardgame.h card.h hand.h player.h deck.h
+card.$(O): card.cpp header.h card.h
+cardgame.$(O): cardgame.cpp header.h cardgame.h card.h deck.h player.h
+carib.$(O): carib.cpp header.h carib.h cardgame.h card.h hand.h player.h deck.h
+chuck.$(O): chuck.cpp header.h chuck.h player.h
+craps.$(O): craps.cpp header.h craps.h player.h
+deck.$(O): deck.cpp header.h card.h deck.h
+dstud.$(O): dstud.cpp header.h card.h deck.h cardgame.h dstud.h player.h hand.h
+faceup.$(O): faceup.cpp header.h card.h deck.h cardgame.h faceup.h player.h hand.h
+hand.$(O): hand.cpp header.h hand.h card.h
+keno.$(O): keno.cpp header.h keno.h player.h
+lir.$(O): lir.cpp header.h card.h deck.h cardgame.h lir.h player.h hand.h
+main.$(O): main.cpp header.h
+mterm.$(O): mterm.cpp header.h
+paigow.$(O): paigow.cpp header.h card.h hand.h deck.h player.h paigow.h cardgame.h
+pkrmach.$(O): pkrmach.cpp header.h pkrmach.h deck.h card.h hand.h player.h cardgame.h
+pkrmach2.$(O): pkrmach2.cpp header.h
+pkrmach3.$(O): pkrmach3.cpp header.h
+pkrmach4.$(O): pkrmach4.cpp header.h
+pkrmachp.$(O): pkrmachp.cpp header.h
+player.$(O): player.cpp header.h player.h card.h hand.h
+poker.$(O): poker.cpp header.h
+reddog.$(O): reddog.cpp header.h card.h hand.h deck.h reddog.h player.h cardgame.h
+roul.$(O): roul.cpp header.h roul.h player.h
+slotmach.$(O): slotmach.cpp header.h slotmach.h player.h
+support.$(O): support.cpp header.h
+texas.$(O): texas.cpp header.h card.h deck.h hand.h cardgame.h texas.h player.h
+three.$(O): three.cpp header.h three.h deck.h card.h hand.h cardgame.h player.h
+wheel.$(O): wheel.cpp header.h wheel.h player.h

@@ -1,0 +1,83 @@
+Symbols:
+0 - number 0
+1 - number 1
+2 - number 2
+3 - number 3
+4 - number 4
+5 - number 5
+6 - number 6
+7 - number 7
+8 - number 8
+9 - number 9
++ - number 10
+~ - jackpot
+! - chip 1
+@ - chip 5
+% - chip 25
+& - chip 100
+( - chip 1000
+) - chip 10000
+_
+"
+'
+: - double 7
+; - triple 7
+[ - X5
+] - bill1
+{ - Red 7
+} - Blue 7
+| - White 7
+, - X10
+- - Single bar
+= - Double bar
+# - Tripple bar
+$ - Dollar sign
+* - Wild
+> - >>>>
+< - <<<<
+^ - up scroll symbol
+A - Amethyst
+B - Bell
+C - Cherry
+D - Diamond
+E - Emerald
+F - Car2
+G - float
+H - Saphire
+I - Star (RED)
+J - Star (WHITE)
+K - Star (BLUE)
+L - Lemon
+M - boat1
+N - boat2
+O - Orange
+P - Plum
+Q - Plane
+R - Ruby
+S - Star
+T - Train
+U - Horseshoe
+V - Down scroll symbol
+W - Car3
+X - X2
+Y - boat3
+Z - car1
+
+Specials:
+* - Position is wild
+1 - Position is 10 times wild
+2 - Position is a double wild
+5 - Position is 5 times wild
+v - Move reel down if on payline
+^ - Move reel up if on payline
+> - set reel to reel on the right
+< - set reel to reel on the left
+
+payout symbols:
+/ - any bar
+. - any non blank
+? - anything
+_ - any 7
+
+
+
